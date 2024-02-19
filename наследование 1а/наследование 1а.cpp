@@ -1,14 +1,14 @@
 ﻿// наследование 1а.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include <iostream>
-#include <cmath>
+#include <iostream> //библитеки 
+#include <cmath>    //библиотеки
 
 using namespace std;
 
 
 //Класс Фигуры - базовый класс
-class Figure
+class Figure//класс фигура
 {
 public:
 	//Переменные-члены,общие для всех фигур
