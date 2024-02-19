@@ -1,8 +1,8 @@
 ﻿// наследование 1а.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include <iostream> //библитеки 
-#include <cmath>    //библиотеки
+#include <iostream> //библитеки ввода -вывода (cout и cin)
+#include <cmath>    //библиотеки математических функции 
 
 using namespace std;
 
@@ -15,10 +15,10 @@ public:
 	int x, y;        //координаты фигуры
 
 	//конструктор по умолчанию 
-	Figure() :x(0), y(0) {}//переменные-члены x и y нулями
+	Figure() :x(0), y(0) {}//инициализирует переменные-члены x и y нулями
 
 	//конструктор с параметрами 
-	Figure(int x, int y) :x(x), y(y) {}//переменные-члены x и y переданными параметрами
+	Figure(int x, int y) :x(x), y(y) {}//инициализирует переменные-члены x и y переданными параметрами
 
 	//Виртуальная функция для вычисления
 	virtual double area() const = 0;// функция area возращяет площать фигуры
@@ -32,10 +32,10 @@ public:
 	int width,height;//Ширена и высота прямоугольника
 
 	//конструктор по умолчанию
-	Rectangle():Figure(),width(0),height(0){}////переменные-члены width и height нулями
+	Rectangle():Figure(),width(0),height(0){}   //инициализирует переменные-члены width и height нулями
 
 	//конструктор с параметрами 
-	Rectangle(int x,int y,int width,int height):Figure(x,y),width(width),height(height){}//переменные-члены width и height переданными параметрами
+	Rectangle(int x,int y,int width,int height):Figure(x,y),width(width),height(height){}//инициализирует переменные-члены width и height переданными параметрами
 
 	//Переопределение виртуальной функции для вычисления площяди прямоугольника
 	double area()const override {//Вычисляет и возращяет площять прямоугольника, перемножая его width и height
